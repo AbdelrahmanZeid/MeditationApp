@@ -209,7 +209,7 @@ class _SignupViewState extends State<SignupView> {
                           ),
                         ),
                         const SizedBox(
-                          width: 150,
+                          width: 120,
                         ),
                         Checkbox(
                           value: false,

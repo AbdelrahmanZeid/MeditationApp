@@ -274,7 +274,8 @@ class WelcomeScreen extends StatelessWidget {
                                       buttonStyle: CustomButtonStyles.fillGray,
                                       buttonTextStyle: CustomTextStyles
                                           .bodyMediumBluegray800,
-                                      onTap: () => Navigator.pushNamed(context, ChooseTopicView.routeName),
+                                      onTap: () => Navigator.pushNamed(
+                                          context, ChooseTopicView.routeName),
                                     ),
                                   ],
                                 ),
