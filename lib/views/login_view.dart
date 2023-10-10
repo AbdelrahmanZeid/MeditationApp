@@ -5,8 +5,6 @@ import 'package:meditation/views/welcome_screen/welcome_screen.dart';
 import 'package:meditation/widgets/custom_button.dart';
 import 'package:meditation/widgets/custom_text_form_field.dart';
 
-import '../routes/app_routes.dart';
-
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
   static const routeName = 'loginview';
