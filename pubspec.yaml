@@ -64,7 +64,14 @@ flutter:
     - assets/images/design_image/Group 17.png
     - assets/images/design_image/Group.png
     - assets/images/design_image/Group 6791.png
-    
+    - assets/images/design_image/Group 6802.png
+    - assets/images/design_image/Vector (1).png
+    - assets/images/design_image/Vector (2).png
+    - assets/images/design_image/Vector (3).png
+    - assets/images/design_image/Vector.png
+    - assets/images/design_image/Facebook.png
+    - assets/images/design_image/iconGoogle.png
+    - assets/images/design_image/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
