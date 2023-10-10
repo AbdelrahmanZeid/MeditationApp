@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:meditation/constants.dart';
 import 'package:meditation/views/signup_view.dart';
-import 'package:meditation/views/welcome_view.dart';
+import 'package:meditation/views/welcome_screen/welcome_screen.dart';
 import 'package:meditation/widgets/custom_button.dart';
 import 'package:meditation/widgets/custom_text_form_field.dart';
+
+import '../routes/app_routes.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
@@ -171,8 +173,7 @@ class _LoginViewState extends State<LoginView> {
                       onPressed: () {
                         if (formKey.currentState!.validate()) {
                           formKey.currentState!.save();
-
-                          Navigator.pushNamed(context, WelcomView.routeName);
+                          Navigator.pushNamed(context, WelcomeScreen.routeName);
                         }
                       },
                       child: Text(
