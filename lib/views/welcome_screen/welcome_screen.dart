@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meditation/core/app_export.dart';
 import 'package:meditation/views/choose_topic_view.dart';
+import 'package:meditation/views/reminders_screen/reminders_screen.dart';
 import 'package:meditation/widgets/widgets/custom_elevated_button.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -67,7 +68,7 @@ class WelcomeScreen extends StatelessWidget {
                           text: TextSpan(
                             children: [
                               TextSpan(
-                                text: "Hi Afsar, Welcome \n",
+                                text: "Hi Nada , Welcome \n",
                                 style: CustomTextStyles.headlineLargeRegular,
                               ),
                               TextSpan(
@@ -274,8 +275,12 @@ class WelcomeScreen extends StatelessWidget {
                                       buttonStyle: CustomButtonStyles.fillGray,
                                       buttonTextStyle: CustomTextStyles
                                           .bodyMediumBluegray800,
+<<<<<<< HEAD
                                       onTap: () => Navigator.pushNamed(
                                           context, ChooseTopicView.routeName),
+=======
+                                      onTap: () => Navigator.pushNamed(context, RemindersScreen.routeName),
+>>>>>>> e2aeb8547e2bae9f55319cf2f4feb859215252e5
                                     ),
                                   ],
                                 ),
