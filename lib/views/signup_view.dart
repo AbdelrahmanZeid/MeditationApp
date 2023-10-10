@@ -62,16 +62,16 @@ class _SignupViewState extends State<SignupView> {
                 ),
               ],
             ),
-            GestureDetector(
-              onTap: () => Navigator.pop(context),
-              child: Padding(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 35, horizontal: 12),
-                child: Image.asset(
-                  'assets/images/design_image/Group 6802.png',
-                ),
-              ),
-            ),
+            // GestureDetector(
+            //   onTap: () => Navigator.pop(context),
+            //   child: Padding(
+            //     padding:
+            //         const EdgeInsets.symmetric(vertical: 35, horizontal: 12),
+            //     child: Image.asset(
+            //       'assets/images/design_image/Group 6802.png',
+            //     ),
+            //   ),
+            // ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15),
               child: Form(
@@ -217,7 +217,9 @@ class _SignupViewState extends State<SignupView> {
                         ),
                       ],
                     ),
-                    const SizedBox(height: 10,),
+                    const SizedBox(
+                      height: 10,
+                    ),
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         minimumSize: Size(350, 63),

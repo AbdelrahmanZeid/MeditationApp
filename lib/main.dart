@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:meditation/views/choose_topic_view.dart';
 import 'package:meditation/views/login_view.dart';
 import 'package:meditation/views/reminders_screen/reminders_screen.dart';
+import 'package:meditation/views/login_view.dart';
 import 'package:meditation/views/signup_view.dart';
-
 import 'package:meditation/views/home_view.dart';
 import 'package:meditation/views/welcome_screen/welcome_screen.dart';
 
@@ -17,6 +17,7 @@ class MeditationApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      
       debugShowCheckedModeBanner: false,
       routes: {
         '/': (context) => const HomeView(),
