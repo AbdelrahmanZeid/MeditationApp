@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meditation/constants.dart';
-import 'package:meditation/views/welcome_view.dart';
+import 'package:meditation/views/login_view.dart';
+import 'package:meditation/views/welcome_screen/welcome_screen.dart';
 import 'package:meditation/widgets/custom_button.dart';
 import 'package:meditation/widgets/custom_text_form_field.dart';
 
@@ -232,7 +233,7 @@ class _SignupViewState extends State<SignupView> {
                         if (formKey.currentState!.validate()) {
                           formKey.currentState!.save();
 
-                          Navigator.pushNamed(context, WelcomView.routeName);
+                          Navigator.pushNamed(context, LoginView.routeName);
                         }
                       },
                       child: Text(

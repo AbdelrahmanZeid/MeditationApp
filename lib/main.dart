@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:meditation/views/signup_view.dart';
 
 import 'package:meditation/views/home_view.dart';
-import 'package:meditation/views/welcome_view.dart';
+import 'package:meditation/views/welcome_screen/welcome_screen.dart';
 
 void main() => runApp(
       const MeditationApp(),
@@ -21,7 +21,8 @@ class MeditationApp extends StatelessWidget {
         '/': (context) => const HomeView(),
         LoginView.routeName: (context) => LoginView(),
         SignupView.routeName: (context) => SignupView(),
-        WelcomView.routeName:(context) => WelcomView(),
+        ChooseTopicView.routeName:(context) => ChooseTopicView(),
+        WelcomeScreen.routeName:(context) => WelcomeScreen()
       },
       theme: ThemeData(useMaterial3: true, brightness: Brightness.light),
     );
