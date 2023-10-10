@@ -130,7 +130,7 @@ class _SignupViewState extends State<SignupView> {
                       suffixIcon: Icons.check,
                       validator: (value) {
                         if (value!.isEmpty) {
-                          return 'Field is required';
+                          return 'Username is required';
                         } else {
                           return null;
                         }
@@ -152,7 +152,7 @@ class _SignupViewState extends State<SignupView> {
                       suffixIcon: Icons.check,
                       validator: (value) {
                         if (value!.isEmpty) {
-                          return 'Field is required';
+                          return 'Email is required';
                         } else if (!value.contains('@')) {
                           return 'Field must contain @';
                         } else {
@@ -176,7 +176,7 @@ class _SignupViewState extends State<SignupView> {
                       onPressed: () {},
                       validator: (value) {
                         if (value!.isEmpty) {
-                          return 'Field is required';
+                          return 'Password is required';
                         } else if (value.length < 5) {
                           return 'Field must at least 5 letter';
                         } else {
@@ -193,6 +193,7 @@ class _SignupViewState extends State<SignupView> {
                       height: 10,
                     ),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
                           'i have read the ',
@@ -207,7 +208,7 @@ class _SignupViewState extends State<SignupView> {
                           ),
                         ),
                         const SizedBox(
-                          width: 120,
+                          width: 150,
                         ),
                         Checkbox(
                           value: false,
