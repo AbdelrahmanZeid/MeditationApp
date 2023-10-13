@@ -1,6 +1,7 @@
-import 'package:meditation/views/welcome_screen/welcome_screen.dart';
 
-import '../../constants.dart';
+
+import 'package:meditation/views/home_view.dart';
+
 import '../reminders_screen/widgets/chipviewsu_item_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:meditation/core/app_export.dart';
@@ -358,7 +359,7 @@ class RemindersScreen extends StatelessWidget {
                 buttonStyle: CustomButtonStyles.fillIndigo,
                 margin: EdgeInsets.only( left: 12.h, top: 30.v, right: 12.h,),
                 alignment: Alignment.center,
-                //onTap: () => Navigator.pushNamed(context, WelcomeScreen.routeName),
+                onTap: () => Navigator.pushNamed(context, HomeView.routeName),
               ),
               SizedBox(height: 19.v),
               Align(

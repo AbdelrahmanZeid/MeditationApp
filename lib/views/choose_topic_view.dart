@@ -1,26 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:meditation/constants.dart';
 import 'package:meditation/models/topic_model.dart';
+import 'package:meditation/views/reminders_screen/reminders_screen.dart';
 
 class ChooseTopicView extends StatelessWidget {
   ChooseTopicView({super.key});
   static const routeName = 'choosetopicview';
 
-  final List<TopicItem> topicsList = const [
-    TopicItem(
-      topic: Topic(
-        title: 'Reduce stress',
-        image: 'assets/images/img_maskgroup_122x177.png',
-        color: Color(0xff808AFF),
-      ),
-    ),
-    TopicItem(
-      topic: Topic(
-        title: 'Reduce stress',
-        image: 'assets/images/img_maskgroup_122x177.png',
-        color: Color(0xff808AFF),
-      ),
-    ),
+  final List<String> imagesList = const [
+    'assets/images/design_image/Group (2).png',
+    'assets/images/design_image/Group 6790.png',
+    'assets/images/design_image/Group 22.png',
+    'assets/images/design_image/Mask Group (1).png',
+    'assets/images/design_image/Mask Group.png',
+    'assets/images/design_image/Group 19 (1).png',
+    'assets/images/design_image/Group (1).png',
+    'assets/images/design_image/Group 21.png',
   ];
   @override
   Widget build(BuildContext context) {
@@ -34,7 +29,7 @@ class ChooseTopicView extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 12, top: 70),
+            padding: const EdgeInsets.only(left: 12, top: 70, right: 12),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -51,14 +46,21 @@ class ChooseTopicView extends StatelessWidget {
                   style: TextStyle(fontSize: 16, color: kTextColor),
                 ),
                 Expanded(
-                  child: ListView.builder(
-                  
-                    itemCount: topicsList.length,
+                  child: GridView.builder(
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 2,
+                        crossAxisSpacing: 10,
+                        mainAxisSpacing: 5),
                     itemBuilder: (context, index) {
-                      return TopicItem(
-                        topic: topicsList[index].topic,
+                      return InkWell(
+                        onTap: () => Navigator.pushNamed(
+                            context, RemindersScreen.routeName),
+                        child: Image.asset(
+                          imagesList[index],
+                        ),
                       );
                     },
+                    itemCount: imagesList.length,
                   ),
                 ),
               ],
@@ -66,25 +68,6 @@ class ChooseTopicView extends StatelessWidget {
           ),
         ],
       ),
-    );
-  }
-}
-
-class TopicItem extends StatelessWidget {
-  const TopicItem({super.key, required this.topic});
-  final Topic topic;
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 20,
-      height: 200,
-      decoration: BoxDecoration(
-        color: topic.color,
-        image: DecorationImage(
-          image: AssetImage(topic.image),
-        ),
-      ),
-      child: Text(topic.title),
     );
   }
 }

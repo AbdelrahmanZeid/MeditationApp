@@ -14,6 +14,8 @@ class SignupView extends StatefulWidget {
 }
 
 class _SignupViewState extends State<SignupView> {
+
+  
   String userEmail = '';
   String userPassword = '';
   String userName = '';
@@ -156,6 +158,10 @@ class _SignupViewState extends State<SignupView> {
                           return 'Email is required';
                         } else if (!value.contains('@')) {
                           return 'Field must contain @';
+                        } else if (!value.contains(
+                          RegExp(r'[0-9]'),
+                        )) {
+                          return 'Field must contain number';
                         } else {
                           return null;
                         }

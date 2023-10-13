@@ -3,8 +3,8 @@ import 'package:meditation/constants.dart';
 import 'package:meditation/views/login_view.dart';
 import 'package:meditation/views/signup_view.dart';
  
-class HomeViewBody extends StatelessWidget {
-  const HomeViewBody({super.key});
+class MeditationViewBody extends StatelessWidget {
+  const MeditationViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
