@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:meditation/views/choose_topic_view.dart';
 import 'package:meditation/views/home_view.dart';
 import 'package:meditation/views/login_view.dart';
@@ -17,7 +18,7 @@ class MeditationApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
         '/': (context) => const MeditationView(),
@@ -25,8 +26,7 @@ class MeditationApp extends StatelessWidget {
         SignupView.routeName: (context) => SignupView(),
         ChooseTopicView.routeName: (context) => ChooseTopicView(),
         WelcomeScreen.routeName: (context) => WelcomeScreen(),
-        ChooseTopicView.routeName: (context) => ChooseTopicView(),
-        RemindersScreen.routeName: (context) => RemindersScreen(),
+         RemindersScreen.routeName: (context) => RemindersScreen(),
         HomeView.routeName:(context) => HomeView(),
       },
       theme: ThemeData(useMaterial3: true, brightness: Brightness.light),

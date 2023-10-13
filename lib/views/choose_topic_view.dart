@@ -13,7 +13,7 @@ class ChooseTopicView extends StatelessWidget {
     'assets/images/design_image/Group 22.png',
     'assets/images/design_image/Mask Group (1).png',
     'assets/images/design_image/Mask Group.png',
-    'assets/images/design_image/Group 19 (1).png',
+   
     'assets/images/design_image/Group (1).png',
     'assets/images/design_image/Group 21.png',
   ];

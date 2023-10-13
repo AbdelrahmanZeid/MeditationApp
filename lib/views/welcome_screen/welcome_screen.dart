@@ -68,11 +68,13 @@ class WelcomeScreen extends StatelessWidget {
                             children: [
                               TextSpan(
                                 text: "Hi Nada , Welcome \n",
-                                style: CustomTextStyles.headlineLargeRegular,
+                                style: TextStyle(
+                                fontSize: 26,fontWeight: FontWeight.bold,),
                               ),
                               TextSpan(
                                 text: "to Silent Moon",
-                                style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),
+                                style: TextStyle(
+                                fontSize: 26),
                               ),
                             ],
                           ),
