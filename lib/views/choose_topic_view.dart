@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meditation/constants.dart';
-import 'package:meditation/models/topic_model.dart';
-import 'package:meditation/views/reminders_screen/reminders_screen.dart';
+ import 'package:meditation/views/reminders_screen/reminders_screen.dart';
 
 class ChooseTopicView extends StatelessWidget {
   ChooseTopicView({super.key});
