@@ -13,7 +13,7 @@ class HomeViewBody extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const SizedBox(
-            height: 50,
+            height: 100,
           ),
           Center(child: Image.asset('assets/images/design_image/Group 17.png')),
           SizedBox(

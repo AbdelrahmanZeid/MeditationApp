@@ -1,10 +1,18 @@
+import 'package:meditation/views/course_details_tab_container_screen/course_details_tab_container_screen.dart';
+import 'package:meditation/views/meditate_vtwo_tab_container_page/meditate_vtwo_tab_container_page.dart';
+import 'package:meditation/views/music_vtwo_screen/music_vtwo_screen.dart';
 import 'package:meditation/views/welcome_screen/welcome_screen.dart';
 import '../../constants.dart';
 import 'package:meditation/views/home_view.dart';
+import '../meditate_vtwo_page/meditate_vtwo_page.dart';
+import '../music_screen/music_screen.dart';
+import '../play_option_screen/play_option_screen.dart';
 import '../reminders_screen/widgets/chipviewsu_item_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:meditation/core/app_export.dart';
 import 'package:meditation/widgets/widgets/custom_elevated_button.dart';
+
+import '../welcome_sleep_screen/welcome_sleep_screen.dart';
 
 class RemindersScreen extends StatelessWidget {
   static const routeName = 'remindersView';
@@ -364,7 +372,12 @@ class RemindersScreen extends StatelessWidget {
                   right: 12.h,
                 ),
                 alignment: Alignment.center,
-                onTap: () => Navigator.pushNamed(context, HomeView.routeName),
+                onTap: () => Navigator.pushNamed(context, CourseDetailsTabContainerScreen.routeName),
+                //onTap: () => Navigator.pushNamed(context, MusicScreen.routeName),
+                //onTap: () => Navigator.pushNamed(context, MusicScreen2.routeName),
+                //onTap: () => Navigator.pushNamed(context, MeditateVtwoTabContainerPage.routeName),
+                //onTap: () => Navigator.pushNamed(context, WelcomeSleepScreen.routeName),
+                //onTap: () => Navigator.pushNamed(context, PlayOptionScreen.routeName),
               ),
               SizedBox(height: 19.v),
               Align(
