@@ -1,12 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:meditation/constants.dart';
+ import 'package:meditation/views/reminders_screen/reminders_screen.dart';
 
 class ChooseTopicView extends StatelessWidget {
-  const ChooseTopicView({super.key});
+  ChooseTopicView({super.key});
   static const routeName = 'choosetopicview';
 
-  final List<String>topicsList=const [
-
+  final List<String> imagesList = const [
+    'assets/images/design_image/Group (2).png',
+    'assets/images/design_image/Group 6790.png',
+    'assets/images/design_image/Group 22.png',
+    'assets/images/design_image/Mask Group (1).png',
+    'assets/images/design_image/Mask Group.png',
+   
+    'assets/images/design_image/Group (1).png',
+    'assets/images/design_image/Group 21.png',
   ];
   @override
   Widget build(BuildContext context) {
@@ -20,7 +28,7 @@ class ChooseTopicView extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 12, top: 70),
+            padding: const EdgeInsets.only(left: 12, top: 70, right: 12),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -33,15 +41,25 @@ class ChooseTopicView extends StatelessWidget {
                   style: TextStyle(fontSize: 25),
                 ),
                 Text(
-                  'choose a topic to focuse on:',
+                  'choose a topic to focus on:',
                   style: TextStyle(fontSize: 16, color: kTextColor),
                 ),
                 Expanded(
-                  child: ListView.builder(
-                    itemCount: 12,
+                  child: GridView.builder(
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 2,
+                        crossAxisSpacing: 10,
+                        mainAxisSpacing: 5),
                     itemBuilder: (context, index) {
-                      return Text('hellli');
+                      return InkWell(
+                        onTap: () => Navigator.pushNamed(
+                            context, RemindersScreen.routeName),
+                        child: Image.asset(
+                          imagesList[index],
+                        ),
+                      );
                     },
+                    itemCount: imagesList.length,
                   ),
                 ),
               ],
