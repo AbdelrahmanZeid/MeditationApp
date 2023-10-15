@@ -14,6 +14,8 @@ class SignupView extends StatefulWidget {
 }
 
 class _SignupViewState extends State<SignupView> {
+
+  
   String userEmail = '';
   String userPassword = '';
   String userName = '';
@@ -62,16 +64,16 @@ class _SignupViewState extends State<SignupView> {
                 ),
               ],
             ),
-            GestureDetector(
-              onTap: () => Navigator.pop(context),
-              child: Padding(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 35, horizontal: 12),
-                child: Image.asset(
-                  'assets/images/design_image/Group 6802.png',
-                ),
-              ),
-            ),
+            // GestureDetector(
+            //   onTap: () => Navigator.pop(context),
+            //   child: Padding(
+            //     padding:
+            //         const EdgeInsets.symmetric(vertical: 35, horizontal: 12),
+            //     child: Image.asset(
+            //       'assets/images/design_image/Group 6802.png',
+            //     ),
+            //   ),
+            // ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15),
               child: Form(
@@ -156,6 +158,10 @@ class _SignupViewState extends State<SignupView> {
                           return 'Email is required';
                         } else if (!value.contains('@')) {
                           return 'Field must contain @';
+                        } else if (!value.contains(
+                          RegExp(r'[0-9]'),
+                        )) {
+                          return 'Field must contain number';
                         } else {
                           return null;
                         }
@@ -209,7 +215,7 @@ class _SignupViewState extends State<SignupView> {
                           ),
                         ),
                         const SizedBox(
-                          width: 150,
+                          width: 120,
                         ),
                         Checkbox(
                           value: false,
@@ -217,7 +223,9 @@ class _SignupViewState extends State<SignupView> {
                         ),
                       ],
                     ),
-                    const SizedBox(height: 10,),
+                    const SizedBox(
+                      height: 10,
+                    ),
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         minimumSize: Size(350, 63),

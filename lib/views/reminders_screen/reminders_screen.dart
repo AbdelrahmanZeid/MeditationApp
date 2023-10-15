@@ -1,5 +1,6 @@
 import 'package:meditation/views/welcome_screen/welcome_screen.dart';
 import '../../constants.dart';
+import 'package:meditation/views/home_view.dart';
 import '../reminders_screen/widgets/chipviewsu_item_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:meditation/core/app_export.dart';
@@ -9,8 +10,8 @@ class RemindersScreen extends StatelessWidget {
   static const routeName = 'remindersView';
   const RemindersScreen({Key? key})
       : super(
-    key: key,
-  );
+          key: key,
+        );
 
   @override
   Widget build(BuildContext context) {
@@ -150,7 +151,7 @@ class RemindersScreen extends StatelessWidget {
                                       padding: EdgeInsets.only(top: 3.v),
                                       child: Row(
                                         mainAxisAlignment:
-                                        MainAxisAlignment.center,
+                                            MainAxisAlignment.center,
                                         mainAxisSize: MainAxisSize.min,
                                         children: [
                                           Text(
@@ -160,7 +161,7 @@ class RemindersScreen extends StatelessWidget {
                                           ),
                                           Padding(
                                             padding:
-                                            EdgeInsets.only(left: 48.h),
+                                                EdgeInsets.only(left: 48.h),
                                             child: Text(
                                               "30",
                                               style: CustomTextStyles
@@ -169,7 +170,7 @@ class RemindersScreen extends StatelessWidget {
                                           ),
                                           Padding(
                                             padding:
-                                            EdgeInsets.only(left: 45.h),
+                                                EdgeInsets.only(left: 45.h),
                                             child: Text(
                                               "AM",
                                               style: CustomTextStyles
@@ -199,21 +200,21 @@ class RemindersScreen extends StatelessWidget {
                                       padding: EdgeInsets.only(right: 99.h),
                                       child: Row(
                                         mainAxisAlignment:
-                                        MainAxisAlignment.end,
+                                            MainAxisAlignment.end,
                                         mainAxisSize: MainAxisSize.min,
                                         children: [
                                           Text(
                                             "31",
                                             style:
-                                            theme.textTheme.headlineSmall,
+                                                theme.textTheme.headlineSmall,
                                           ),
                                           Padding(
                                             padding:
-                                            EdgeInsets.only(left: 47.h),
+                                                EdgeInsets.only(left: 47.h),
                                             child: Text(
                                               "PM",
                                               style:
-                                              theme.textTheme.headlineSmall,
+                                                  theme.textTheme.headlineSmall,
                                             ),
                                           ),
                                         ],
@@ -349,16 +350,21 @@ class RemindersScreen extends StatelessWidget {
                 child: Wrap(
                   runSpacing: 14.75.v,
                   spacing: 10.75.h,
-                  children: List<Widget>.generate(7, (index) => ChipviewsuItemWidget()),
+                  children: List<Widget>.generate(
+                      7, (index) => ChipviewsuItemWidget()),
                 ),
               ),
               CustomElevatedButton(
                 text: "SAVE",
                 buttonStyle: CustomButtonStyles.fillIndigo,
                 buttonTextStyle: CustomTextStyles.bodyMediumBluegray800,
-                margin: EdgeInsets.only( left: 12.h, top: 30.v, right: 12.h,),
+                margin: EdgeInsets.only(
+                  left: 12.h,
+                  top: 30.v,
+                  right: 12.h,
+                ),
                 alignment: Alignment.center,
-                onTap: () => Navigator.pushNamed(context, WelcomeScreen.routeName),
+                onTap: () => Navigator.pushNamed(context, HomeView.routeName),
               ),
               SizedBox(height: 19.v),
               Align(

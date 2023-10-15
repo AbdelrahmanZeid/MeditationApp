@@ -1,69 +1,72 @@
+
 import 'package:flutter/material.dart';
 import 'package:meditation/constants.dart';
-import 'package:meditation/views/login_view.dart';
-import 'package:meditation/views/signup_view.dart';
- 
+
 class HomeViewBody extends StatelessWidget {
-  const HomeViewBody({super.key});
+ const HomeViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Spacer(flex: 2,),
-        Center(child: Image.asset('assets/images/design_image/Group 17.png')),
-        Spacer(
-          flex: 1,
-        ),
-        Image.asset('assets/images/design_image/Group.png'),
-        Spacer(
-          flex: 2,
-        ),
-        Image.asset('assets/images/design_image/Group 6791.png'),
-        Spacer(
-          flex: 2,
-        ),
-       ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        minimumSize: Size(350, 63),
-        elevation: 15,
-        backgroundColor:kButtonColor,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(35),
-        ),
-      ),
-      onPressed:  () => Navigator.pushNamed(context, SignupView.routeName),
-      child:
-          
-          Text(
-            'Sign up',
-            style: TextStyle(color: Colors.black),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const SizedBox(
+            height: 50,
           ),
-       
-    ),
-        const SizedBox(
-          height: 10,
-        ),
-        Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  'Already have an account ? ',
-                  style: TextStyle(color: kTextColor,fontWeight: FontWeight.bold),
-                  
-                ),
-                TextButton(
-                  onPressed: () =>
-                      Navigator.pushNamed(context, LoginView.routeName),
-                  child: Text('Sign In'),
-                ),
-              ],
+          Center(child: Image.asset('assets/images/design_image/Group 17.png')),
+          SizedBox(
+            height: 30,
+          ),
+          Text(
+            'Good Morning , Asfar',
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+          ),
+          Text(
+            'We wish have a Good day',
+            style: TextStyle(
+              fontSize: 18,
+              color: kTextColor,
             ),
-            const SizedBox(
-              height: 20,
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Image.asset('assets/images/design_image/Group 7.png'),
+              Image.asset('assets/images/design_image/Group 8.png'),
+            ],
+          ),
+          const SizedBox(
+            height: 15,
+          ),
+          Center(
+            child: Image.asset(
+              'assets/images/design_image/Groupjj.png',
             ),
-        
-      ],
+          ),
+          const SizedBox(
+            height: 15,
+          ),
+          Text(
+            'Recommender for you',
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
+          ),
+          const SizedBox(
+            height: 15,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Image.asset('assets/images/design_image/Group 23.png'),
+              Image.asset('assets/images/design_image/Group 25.png'),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }

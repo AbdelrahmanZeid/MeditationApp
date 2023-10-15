@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meditation/core/app_export.dart';
 import 'package:meditation/views/choose_topic_view.dart';
-import 'package:meditation/views/reminders_screen/reminders_screen.dart';
-import 'package:meditation/widgets/widgets/custom_elevated_button.dart';
+ import 'package:meditation/widgets/widgets/custom_elevated_button.dart';
 
 class WelcomeScreen extends StatelessWidget {
   static const routeName = 'WelcomeView';
@@ -69,11 +68,13 @@ class WelcomeScreen extends StatelessWidget {
                             children: [
                               TextSpan(
                                 text: "Hi Nada , Welcome \n",
-                                style: CustomTextStyles.headlineLargeRegular,
+                                style: TextStyle(
+                                fontSize: 26,fontWeight: FontWeight.bold,),
                               ),
                               TextSpan(
                                 text: "to Silent Moon",
-                                style: theme.textTheme.headlineLarge,
+                                style: TextStyle(
+                                fontSize: 26),
                               ),
                             ],
                           ),
@@ -275,7 +276,8 @@ class WelcomeScreen extends StatelessWidget {
                                       buttonStyle: CustomButtonStyles.fillGray,
                                       buttonTextStyle: CustomTextStyles
                                           .bodyMediumBluegray800,
-                                      onTap: () => Navigator.pushNamed(context, RemindersScreen.routeName),
+                                      onTap: () => Navigator.pushNamed(
+                                          context, ChooseTopicView.routeName),
                                     ),
                                   ],
                                 ),
