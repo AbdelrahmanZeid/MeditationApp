@@ -22,7 +22,6 @@ class bottomNavigationBar extends StatelessWidget {
         unselectedItemColor: Colors.grey,
         onTap: (index) {
           barCubit.onTap(index);
-
           print(index);
         },
         currentIndex: barCubit.currentIndex,
