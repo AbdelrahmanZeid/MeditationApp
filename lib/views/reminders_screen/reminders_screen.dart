@@ -1,5 +1,4 @@
 import 'package:meditation/views/welcome_screen/welcome_screen.dart';
-
 import '../../constants.dart';
 import '../reminders_screen/widgets/chipviewsu_item_widget.dart';
 import 'package:flutter/material.dart';
@@ -356,9 +355,10 @@ class RemindersScreen extends StatelessWidget {
               CustomElevatedButton(
                 text: "SAVE",
                 buttonStyle: CustomButtonStyles.fillIndigo,
+                buttonTextStyle: CustomTextStyles.bodyMediumBluegray800,
                 margin: EdgeInsets.only( left: 12.h, top: 30.v, right: 12.h,),
                 alignment: Alignment.center,
-                //onTap: () => Navigator.pushNamed(context, WelcomeScreen.routeName),
+                onTap: () => Navigator.pushNamed(context, WelcomeScreen.routeName),
               ),
               SizedBox(height: 19.v),
               Align(
